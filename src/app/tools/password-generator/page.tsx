@@ -30,7 +30,7 @@ export default function PasswordGenerator() {
     const sym = "!@#$%^&*()_+[]{}<>?/";
 
     let allChars = "";
-    let guaranteedChars: string[] = [];
+    const guaranteedChars: string[] = [];
 
     if (options.uppercase) {
       allChars += upper;
@@ -54,8 +54,8 @@ export default function PasswordGenerator() {
       return;
     }
 
-    let remainingLength = length - guaranteedChars.length;
-    let passwordChars = [...guaranteedChars];
+    const remainingLength = length - guaranteedChars.length;
+    const passwordChars = [...guaranteedChars];
 
     for (let i = 0; i < remainingLength; i++) {
       passwordChars.push(allChars[Math.floor(Math.random() * allChars.length)]);
